@@ -37,7 +37,6 @@ uint32_t sm = 0;
 // Choose which PIO instance to use (there are two instances)
 PIO pio;
 
-// Diagnostics LEDs.
 
 void apply_frequency()
 {
@@ -61,7 +60,13 @@ void apply_frequency()
 
 
 void setup() {
-  Serial.begin(115200);
+
+ // LEDs init
+ pinMode(LED_BUILTIN, OUTPUT);
+ gpio_set_mask(1 << LED_BUILTIN);
+
+  
+ Serial.begin(115200);
 
  while (!Serial)  //Caution!!  with Serial, if no USB-serial open, it will be stuck here
   {  //wait for PC USB-serial to open
@@ -75,12 +80,6 @@ void setup() {
 
 
   Serial.println("setup");
-
-  // LEDs init
-  pinMode(LED_BUILTIN, OUTPUT);
-
-
-  gpio_set_mask(1 << LED_BUILTIN);
 
  
   //prepare pio quadrature oscillator
