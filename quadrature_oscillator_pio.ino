@@ -1,12 +1,18 @@
 // generador por pio de frecuencia en cuadratura, para exitar directamente un mixer tayloe
 // tipo softrock (ahorra un SI5351 para generar I-lo e Q-lo) de 0 a 30 mhz
 
-// Encontrado por casulidad por ahi y adaptado para mis necesidades
+// Encontrado por casulidad por ahi y adaptado para mis necesidades a Arduino RP2040
 // Creditos a quien corresponda, lamentablemente no pude encontrar de nuevo la pagina 
 // de donde lo baje.
 
 // anda en un solo core, pero lo probe con los dos cores y funciona perfectamente tambien
 
+// las salidas en cuadratura estan en GPIO0 y GPIO1
+
+// - adaptado y modificado en 2024 por LU9DA -
+
+// Uso publico, si se comparte o usa en proyectos, este encabezado DEBE PERMANECER como esta
+// Public use, if shared or used in projects, this header MUST REMAIN as is
 
 #include <Arduino.h>
 #include <stdarg.h>
