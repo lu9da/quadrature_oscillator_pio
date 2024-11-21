@@ -5,6 +5,9 @@
 // Creditos a quien corresponda, lamentablemente no pude encontrar de nuevo la pagina 
 // de donde lo baje.
 
+// Editado: El autor del pio.h se comunico conmigo, 
+// gracias a https://github.com/dawsonjon por su excelente trabajo
+
 // anda en un solo core, pero lo probe con los dos cores y funciona perfectamente tambien
 
 // las salidas en cuadratura estan en GPIO0 y GPIO1
